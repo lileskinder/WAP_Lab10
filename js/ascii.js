@@ -49,10 +49,6 @@
 
 
             startbtn.click(function() {
-
-               
-
-
                 var items = $("#text-area").val();
                 initialText = items;
                 stopbtn.removeAttr("disabled");
@@ -61,15 +57,8 @@
                     
 
                     characterItem =  items.split("=====\n"); 
-                   
-                   
-                    
-                    counter =0;
-                  
-                 
-                        TimerId = setInterval(()=>animateFunc(counter, characterItem), speed);
-
-                    
+                    counter =0;                 
+                        TimerId = setInterval(()=>animateFunc(counter, characterItem), speed);    
                 }
 
                 startbtn.prop( "disabled", true );
@@ -90,10 +79,7 @@
                     
                 }
 
-
                 stopbtn.click(function() {
-
-
                     clearInterval(TimerId);
                     $("#text-area").text(initialText);
                     stopbtn.prop( "disabled", true );
@@ -101,14 +87,6 @@
                     startbtn.prop( "disabled", false );
         
                     });
-
-
-
-
-
-      
-            
-        
         });
 
     
